@@ -14,10 +14,10 @@ def generate_transaction(is_fraud):
         "transaction_id": f"T{random.randint(1000, 9999)}",
         "user_id": f"U{random.randint(10000, 99999)}",
         "timestamp": "2025-01-01T12:00:00Z",
-        "amount": round(random.uniform(10.0, 5000.0) * (1.5 if is_fraud else 1), 2),  # Fraudulent transactions skewed higher
+        "amount": round(random.uniform(10.0, 5000.0) * (1.5 if is_fraud else 1), 2),  
         "device_type": random.choice(["mobile", "desktop"]),
         "location": random.choice(["B", "G"]) if is_fraud else random.choice(["A", "C", "D", "E", "F", "H"]),
-        "is_vpn": random.choice([True, False]) if not is_fraud else True,  # Fraud is more likely via VPN
+        "is_vpn": random.choice([True, False]) if not is_fraud else True,  
         "card_type": "credit" if is_fraud else random.choice(["credit", "debit"]),
         "status": "approved" if is_fraud else random.choice(["approved", "declined"]),
         "is_fraud": is_fraud
@@ -38,4 +38,4 @@ def generate_and_upload_data(num_records=1000):
 
 # Main function
 if __name__ == "__main__":
-    generate_and_upload_data(num_records=10000)  # Generate 10,000 records
+    generate_and_upload_data(num_records=10000) 
