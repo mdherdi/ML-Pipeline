@@ -5,3 +5,5 @@ This pipeline has following steps:
 3. Split data into training and test set.
 4. Train and Deploy model
 5. Download model locally ang upload to S3 location.
+
+Enjoy!
